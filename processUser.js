@@ -12,7 +12,6 @@ function p(data){
     console.log(util.inspect(data,{depth:5}));
 }
 
-
 var c = new Crawler({
     maxConnections : 10,
     rateLimits: 800,
@@ -58,8 +57,6 @@ var c = new Crawler({
         process.send({status:"COMPLETE"});
     }
 });
-
-
 
 process.on('message', function(m) {
 //    console.log(m);
